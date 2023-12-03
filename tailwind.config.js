@@ -7,6 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        slide: 'slide 100s linear infinite'
+      },
+      keyframes: {
+        slide: {
+          '0%' : {backgroundPosition: "177px 0px"},
+          '25%' : {backgroundPosition: "0px -177px"},
+          '50%' : {backgroundPosition: "177px 177px"},
+          '75%' : {backgroundPosition: "177px -177px"},
+          '100%' : { backgroundPosition: "-177px 0px" },
+        }
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +26,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      "light", "coffee", "valentine"
+    ]
+  }
 }
