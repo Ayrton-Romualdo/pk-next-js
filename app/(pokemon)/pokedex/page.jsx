@@ -2,7 +2,7 @@ import Header from './components/header'
 import Link from 'next/link'
 
 async function getData() {
-  const res = await fetch(`${process.env.BASE_URL_API}/pokemon?limit=151&offset=0`, {cache: 'no-store'});
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`, {cache: 'no-store'});
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
