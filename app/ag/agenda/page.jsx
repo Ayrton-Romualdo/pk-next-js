@@ -6,8 +6,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./customdatepicker.css";
 
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
-import ptBr from 'date-fns/locale/pt-br';
-registerLocale('pt-br', ptBr)
 
 
 export default function Agenda() {
@@ -40,7 +38,6 @@ export default function Agenda() {
                         <DatePicker 
                             selected={startDate}
                             onChange={(date) => setStartDate(date)}
-                            locale={ptBr}
                             calendarClassName="!w-full"
                             disabledKeyboardNavigation
                             filterDate={isWeekday}
