@@ -1,5 +1,6 @@
 import Header from './components/header'
 import Link from 'next/link'
+import {baseUrl} from './../../page'
 
 async function getData() {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`, {cache: 'no-store'});
@@ -17,7 +18,7 @@ async function getData() {
 
 export default async function Pkdex() {
 
-  const res = await fetch('http://localhost:3000/pokedex/api');
+  const res = await fetch(`${baseUrl}/pokedex/api`);
   const data = await res.json();
 
   // const data = await getData();
