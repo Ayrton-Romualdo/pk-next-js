@@ -35,7 +35,7 @@ export default async function Pkdex() {
         </div>
         <div className='pt-3 pb-8  px-4 grid grid-cols-2 gap-4 text-white'>
             <ul>
-                { data ? data.data.results.map((pokemon, index) => 
+                { data ? data.results.map((pokemon, index) => 
                 <Link key={"pkmn" + (index + 1)} href={`/pokedex/${index + 1}`} title={pokemon.name}>
                   <li key={"pkmn" + (index + 1)}>{pokemon.name}</li> 
                 </Link>
