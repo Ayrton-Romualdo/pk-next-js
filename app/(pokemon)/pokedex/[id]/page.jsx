@@ -43,8 +43,8 @@ export default async function Pkmn({params}) {
     
     var num = parseFloat(params.id)
 
-    const res = await fetch(`${baseUrl}/pokedex/api/` + num);
-    const resNext = await fetch(`${baseUrl}/pokedex/api/` + parseFloat(num + 1));
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/` + num);
+    const resNext = await fetch(`https://pokeapi.co/api/v2/pokemon/` + parseFloat(num + 1));
     
     console.log(num)
     
@@ -52,7 +52,7 @@ export default async function Pkmn({params}) {
     let dataPrev = null;
 
     if(num > 1){
-      resPrev = await fetch(`${baseUrl}/pokedex/api/` + parseFloat(num - 1))
+      resPrev = await fetch(`https://pokeapi.co/api/v2/pokemon/` + parseFloat(num - 1))
       dataPrev = await resPrev.json();
     }
 

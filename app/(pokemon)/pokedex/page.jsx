@@ -18,7 +18,7 @@ async function getData() {
 
 export default async function Pkdex() {
 
-  const res = await fetch(`${baseUrl}/pokedex/api`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`);
   const data = await res.json();
 
   // const data = await getData();
